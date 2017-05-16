@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Canvas = new System.Windows.Forms.Panel();
+            this.Canvas = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
             // Canvas
             // 
-            this.Canvas.Location = new System.Drawing.Point(0, 2);
+            this.Canvas.Location = new System.Drawing.Point(12, 12);
             this.Canvas.Name = "Canvas";
-            this.Canvas.Size = new System.Drawing.Size(468, 451);
+            this.Canvas.Size = new System.Drawing.Size(352, 326);
             this.Canvas.TabIndex = 0;
+            this.Canvas.TabStop = false;
             this.Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
             // 
             // FormMain
@@ -47,13 +49,14 @@
             this.Controls.Add(this.Canvas);
             this.Name = "FormMain";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel Canvas;
+        private System.Windows.Forms.PictureBox Canvas;
     }
 }
 
