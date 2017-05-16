@@ -49,14 +49,18 @@
     <Compile Include="Cell.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Dimension.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoveIterator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Randomize.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

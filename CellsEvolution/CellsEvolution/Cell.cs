@@ -10,10 +10,10 @@ namespace CellsEvolution
      {
 
 
-            static int actlim = 20;                       //максимальное количество действий
-            static int comnum = 6;                       //количество доступных команд
-            static int relsense = 5;                    //how much relative can differ
-            static int gainbase = 5;                   //дополнительный прирост получения энергии от фотосинтеза
+        public static int actlim = 20;                       //максимальное количество действий
+        public static int comnum = 6;                       //количество доступных команд
+        public static int relsense = 5;                    //how much relative can differ
+        public static int gainbase = 5;                   //дополнительный прирост получения энергии от фотосинтеза
 
             public bool changed;
                                                     // Параметры клетки
@@ -36,7 +36,7 @@ namespace CellsEvolution
                 this.clr = "000000";
              }
 
-        int MyAction
+      public  int MyAction
         {
             get
             {
@@ -47,12 +47,12 @@ namespace CellsEvolution
             }
         }
 
-        void Gain()
+        public void Gain()
             {
                 energy += gainbase * light;
             }
 
-            void Turn(int dir)
+        public void Turn(int dir)
             {
                 if (dir % 2 == 0)
                 {

@@ -7,12 +7,12 @@ using System.Drawing;
 
 namespace CellsEvolution
 {
-    class BattleField
+    public class BattleField
     {
         Cell[] cells;
 
         private bool lumus;
-        static Point[] lookup = new Point[]                 //оглянуться
+       public static Point[] lookup = new Point[]                 //оглянуться
         {
             new Point(0, -1),
             new Point(1, -1),

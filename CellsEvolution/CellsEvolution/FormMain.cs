@@ -26,7 +26,7 @@ namespace CellsEvolution
         {
             InitializeComponent();
             size = new Size(dimension*scale, dimension * scale);
-            Canvas.Size = size;
+            PlayFild.Size = size;
 
         }
 
@@ -54,6 +54,21 @@ namespace CellsEvolution
                 }
             }
 
+        }
+
+        void SetScale(int scale)
+        {
+            this.scale = scale;
+            this.dimension = battleField.GetDimension();
+            this.size = new Size(dimension * scale, dimension * scale);
+            PlayFild.Size = size;
+        }
+        void SetBattleField(BattleField battleField)
+        {
+            this.battleField = battleField;
+            this.dimension = battleField.GetDimension();
+            this.size = new Size(dimension * scale, dimension * scale);
+            PlayFild.Size = size;
         }
     }
 }
