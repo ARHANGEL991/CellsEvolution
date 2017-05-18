@@ -37,14 +37,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lumus = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.strength = new System.Windows.Forms.TextBox();
-            this.mutagen = new System.Windows.Forms.TextBox();
-            this.end = new System.Windows.Forms.TextBox();
-            this.maxIterations = new System.Windows.Forms.TextBox();
-            this.scale = new System.Windows.Forms.TextBox();
             this.dimension = new System.Windows.Forms.TextBox();
+            this.scale = new System.Windows.Forms.TextBox();
+            this.maxIterations = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.end = new System.Windows.Forms.TextBox();
+            this.mutagen = new System.Windows.Forms.TextBox();
+            this.strength = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +128,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки поля";
             // 
+            // dimension
+            // 
+            this.dimension.Location = new System.Drawing.Point(137, 30);
+            this.dimension.Name = "dimension";
+            this.dimension.Size = new System.Drawing.Size(100, 20);
+            this.dimension.TabIndex = 12;
+            this.dimension.Text = "150";
+            this.dimension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            // 
+            // scale
+            // 
+            this.scale.Location = new System.Drawing.Point(137, 67);
+            this.scale.Name = "scale";
+            this.scale.Size = new System.Drawing.Size(100, 20);
+            this.scale.TabIndex = 11;
+            this.scale.Text = "3";
+            this.scale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            // 
+            // maxIterations
+            // 
+            this.maxIterations.Location = new System.Drawing.Point(137, 107);
+            this.maxIterations.Name = "maxIterations";
+            this.maxIterations.Size = new System.Drawing.Size(100, 20);
+            this.maxIterations.TabIndex = 10;
+            this.maxIterations.Text = "1000";
+            this.maxIterations.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.end);
@@ -144,25 +171,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Настройки клетки";
             // 
-            // button1
+            // end
             // 
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(236, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Применить";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // strength
-            // 
-            this.strength.Location = new System.Drawing.Point(128, 22);
-            this.strength.Name = "strength";
-            this.strength.Size = new System.Drawing.Size(100, 20);
-            this.strength.TabIndex = 7;
-            this.strength.Text = "1";
-            this.strength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.end.Location = new System.Drawing.Point(128, 107);
+            this.end.Name = "end";
+            this.end.Size = new System.Drawing.Size(100, 20);
+            this.end.TabIndex = 9;
+            this.end.Text = "100";
+            this.end.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // mutagen
             // 
@@ -173,41 +189,26 @@
             this.mutagen.Text = "50";
             this.mutagen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // end
+            // strength
             // 
-            this.end.Location = new System.Drawing.Point(128, 107);
-            this.end.Name = "end";
-            this.end.Size = new System.Drawing.Size(100, 20);
-            this.end.TabIndex = 9;
-            this.end.Text = "100";
-            this.end.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.strength.Location = new System.Drawing.Point(128, 22);
+            this.strength.Name = "strength";
+            this.strength.Size = new System.Drawing.Size(100, 20);
+            this.strength.TabIndex = 7;
+            this.strength.Text = "1";
+            this.strength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // maxIterations
+            // button1
             // 
-            this.maxIterations.Location = new System.Drawing.Point(137, 107);
-            this.maxIterations.Name = "maxIterations";
-            this.maxIterations.Size = new System.Drawing.Size(100, 20);
-            this.maxIterations.TabIndex = 10;
-            this.maxIterations.Text = "1000";
-            this.maxIterations.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
-            // 
-            // scale
-            // 
-            this.scale.Location = new System.Drawing.Point(137, 67);
-            this.scale.Name = "scale";
-            this.scale.Size = new System.Drawing.Size(100, 20);
-            this.scale.TabIndex = 11;
-            this.scale.Text = "3";
-            this.scale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
-            // 
-            // dimension
-            // 
-            this.dimension.Location = new System.Drawing.Point(137, 30);
-            this.dimension.Name = "dimension";
-            this.dimension.Size = new System.Drawing.Size(100, 20);
-            this.dimension.TabIndex = 12;
-            this.dimension.Text = "50";
-            this.dimension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(236, 217);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Применить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SettingsForm
             // 

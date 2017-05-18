@@ -33,8 +33,9 @@ namespace CellsEvolution
             settings = setForm.getSettings();
              battleField = new BattleField(settings.dimension, settings.lumus);
             battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
-            size = new Size(settings.dimension * settings.scale, settings.dimension * settings.scale);
-            playField.Size = size;
+            size = new Size(settings.dimension * settings.scale+250, settings.dimension * settings.scale+250);
+            this.Size = size;
+            
 
         }
 
@@ -44,7 +45,7 @@ namespace CellsEvolution
 
             
             Graphics g = e.Graphics;
-            g.FillEllipse(Brushes.Black, 150, 150, 20, 20);
+            
             for (int i = 0; i < settings.dimension; i++)
             {
                 for (int j = 0; j < settings.dimension; j++)
@@ -74,14 +75,14 @@ namespace CellsEvolution
             this.scale = scale;
             this.dimension = battleField.GetDimension();
             this.size = new Size(dimension * scale, dimension * scale);
-            playField.Size = size;
+            this.Size = size;
         }
         void SetBattleField(BattleField battleField)
         {
             this.battleField = battleField;
             this.dimension = battleField.GetDimension();
             this.size = new Size(dimension * scale, dimension * scale);
-            playField.Size = size;
+            this.Size = size;
         }
 
         private void StartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,6 +91,8 @@ namespace CellsEvolution
             run = true;
             start.Enabled=false;
             stop.Enabled=true;
+            StartAutoMove();
+            
         }
 
         private void StopToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,13 +103,14 @@ namespace CellsEvolution
             stop.Enabled=false;
         }
 
-        private void StartAutoMove()
+        private async void StartAutoMove()
         {
             Settings settings = setForm.getSettings();
-            BattleField battleField = new BattleField(settings.dimension, settings.lumus);
-            battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
-            playField.Size=new Size(battleField.GetDimension(), battleField.GetDimension());
-            this.scale=settings.scale;
+            battleField = new BattleField(settings.dimension, settings.lumus);
+            this.battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
+            this.scale = settings.scale;
+            //this.Size=new Size(battleField.GetDimension()*scale, battleField.GetDimension()*scale);
+            
             
             MoveIterator moveIterator = new MoveIterator(battleField);
 
@@ -118,12 +122,12 @@ namespace CellsEvolution
             while ((run) && (iternum < settings.maxIterations))
             {
                 iternum++;
-                progress.Value=iternum;
-                moveIterator.NextMove();
+                progress.Value = iternum;
+                await LongOperationCellsMove(iternum, moveIterator);
             }
 
             start.Enabled=true;
-            stop.Enabled=false;
+            menuLine.Enabled=false;
             timer.Stop();
         }
 
@@ -135,6 +139,20 @@ namespace CellsEvolution
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             setForm.ShowDialog();
+        }
+
+
+        private Task LongOperationCellsMove(int iternum, MoveIterator moveIterator)
+        {
+            return Task.Factory.StartNew(() =>
+            {
+
+                
+                   
+                    moveIterator.NextMove();
+                
+
+            });
         }
     }
 }

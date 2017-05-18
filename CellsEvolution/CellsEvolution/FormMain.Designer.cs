@@ -35,8 +35,8 @@
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.start = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stop = new System.Windows.Forms.ToolStripSeparator();
+            this.stop = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLine = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +52,7 @@
             this.playField.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playField.Location = new System.Drawing.Point(0, 24);
             this.playField.Name = "playField";
-            this.playField.Size = new System.Drawing.Size(595, 494);
+            this.playField.Size = new System.Drawing.Size(967, 609);
             this.playField.TabIndex = 0;
             this.playField.TabStop = false;
             this.playField.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
@@ -64,7 +64,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(595, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(967, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,8 +73,8 @@
             this.mainToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.start,
-            this.stopToolStripMenuItem,
             this.stop,
+            this.menuLine,
             this.exitToolStripMenuItem});
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
             this.mainToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
@@ -94,18 +94,18 @@
             this.start.Text = "&Start";
             this.start.Click += new System.EventHandler(this.StartToolStripMenuItem_Click);
             // 
-            // stopToolStripMenuItem
-            // 
-            this.stopToolStripMenuItem.Enabled = false;
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.stopToolStripMenuItem.Text = "&Stop";
-            this.stopToolStripMenuItem.Click += new System.EventHandler(this.StopToolStripMenuItem_Click);
-            // 
             // stop
             // 
+            this.stop.Enabled = false;
             this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(149, 6);
+            this.stop.Size = new System.Drawing.Size(152, 22);
+            this.stop.Text = "&Stop";
+            this.stop.Click += new System.EventHandler(this.StopToolStripMenuItem_Click);
+            // 
+            // menuLine
+            // 
+            this.menuLine.Name = "menuLine";
+            this.menuLine.Size = new System.Drawing.Size(149, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -142,16 +142,16 @@
             // progress
             // 
             this.progress.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progress.Location = new System.Drawing.Point(0, 506);
+            this.progress.Location = new System.Drawing.Point(0, 621);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(595, 12);
+            this.progress.Size = new System.Drawing.Size(967, 12);
             this.progress.TabIndex = 2;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 518);
+            this.ClientSize = new System.Drawing.Size(967, 633);
             this.Controls.Add(this.progress);
             this.Controls.Add(this.playField);
             this.Controls.Add(this.menuStrip1);
@@ -180,8 +180,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator stop;
+        private System.Windows.Forms.ToolStripMenuItem stop;
+        private System.Windows.Forms.ToolStripSeparator menuLine;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ProgressBar progress;
     }
