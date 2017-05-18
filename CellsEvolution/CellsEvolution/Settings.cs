@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CellsEvolution
 {
-    class Settings
+   public class Settings
     {
         public int cores;
         public int dimension;
@@ -22,6 +22,8 @@ namespace CellsEvolution
         public int end;
 
         String behaviour;
+
+        
 
       
     }

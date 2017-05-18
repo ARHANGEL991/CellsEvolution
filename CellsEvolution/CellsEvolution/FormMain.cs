@@ -18,28 +18,40 @@ namespace CellsEvolution
         private int scale;
 
         private Size size;
-        
+        private bool run;
+        private Settings settings;
+
+        SettingsForm setForm;
 
         private BattleField battleField;
 
         public FormMain()
         {
             InitializeComponent();
-            size = new Size(dimension*scale, dimension * scale);
-            PlayFild.Size = size;
+            
+             setForm = new SettingsForm();
+            settings = setForm.getSettings();
+             battleField = new BattleField(settings.dimension, settings.lumus);
+            battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
+            size = new Size(settings.dimension * settings.scale, settings.dimension * settings.scale);
+            playField.Size = size;
 
         }
 
-        private void Canvas_Paint(object sender, PaintEventArgs e)
+        private  void Canvas_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
-            for (int i = 0; i < dimension; i++)
-            {
-                for (int j = 0; j < dimension; j++)
-                {
-                    Cell current = battleField.GetCell(i, j);
 
-                    Color color = ColorTranslator.FromHtml(current.ColorCode);
+
+            
+            Graphics g = e.Graphics;
+            g.FillEllipse(Brushes.Black, 150, 150, 20, 20);
+            for (int i = 0; i < settings.dimension; i++)
+            {
+                for (int j = 0; j < settings.dimension; j++)
+                {
+                   Cell current = battleField.GetCell(i, j);
+
+                    Color color = ColorTranslator.FromHtml("#"+current.ColorCode);
                     SolidBrush brush = new SolidBrush(color);
                     if (scale > 3)
                     {
@@ -49,6 +61,7 @@ namespace CellsEvolution
                     else
                     {
                         g.DrawRectangle(new Pen(color),i * scale, j * scale, scale - 1, scale - 1);
+                        
                     }
                     current.changed = false;
                 }
@@ -61,14 +74,67 @@ namespace CellsEvolution
             this.scale = scale;
             this.dimension = battleField.GetDimension();
             this.size = new Size(dimension * scale, dimension * scale);
-            PlayFild.Size = size;
+            playField.Size = size;
         }
         void SetBattleField(BattleField battleField)
         {
             this.battleField = battleField;
             this.dimension = battleField.GetDimension();
             this.size = new Size(dimension * scale, dimension * scale);
-            PlayFild.Size = size;
+            playField.Size = size;
+        }
+
+        private void StartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer.Start();
+            run = true;
+            start.Enabled=false;
+            stop.Enabled=true;
+        }
+
+        private void StopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            run = false;
+            timer.Stop();
+            start.Enabled=true;
+            stop.Enabled=false;
+        }
+
+        private void StartAutoMove()
+        {
+            Settings settings = setForm.getSettings();
+            BattleField battleField = new BattleField(settings.dimension, settings.lumus);
+            battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
+            playField.Size=new Size(battleField.GetDimension(), battleField.GetDimension());
+            this.scale=settings.scale;
+            
+            MoveIterator moveIterator = new MoveIterator(battleField);
+
+            progress.Minimum=0;
+            progress.Maximum=settings.maxIterations;
+            
+
+            int iternum = 0;
+            while ((run) && (iternum < settings.maxIterations))
+            {
+                iternum++;
+                progress.Value=iternum;
+                moveIterator.NextMove();
+            }
+
+            start.Enabled=true;
+            stop.Enabled=false;
+            timer.Stop();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            this.playField.Invalidate();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setForm.ShowDialog();
         }
     }
 }

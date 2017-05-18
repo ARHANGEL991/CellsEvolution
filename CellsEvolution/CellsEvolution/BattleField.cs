@@ -71,6 +71,9 @@ namespace CellsEvolution
             initial.energy = energy;
             initial.behaviour[0] = Command.GAIN.GetCode;
             initial.changed = true;
+           Point initialIndex = Normalize(halfSize, halfSize);
+            cells[initialIndex.X + initialIndex.Y * dimension]= initial;
+            
         }
 
 
@@ -108,5 +111,8 @@ namespace CellsEvolution
             double maxDistance = Math.Sqrt(2) * xc;
             return (maxDistance - delta) / maxDistance;
         }
+
+
+
     }
 }

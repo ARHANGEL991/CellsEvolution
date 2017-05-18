@@ -18,7 +18,7 @@ namespace CellsEvolution
 
         public  String GetRandomColorCode()
         {
-            return GetRandom(1, 16777214).ToString("X");
+            return GetRandom(1, 16777214).ToString("X2");
         }
 
         public  int GetRandomPercent()
