@@ -49,6 +49,7 @@
             // 
             // playField
             // 
+            this.playField.BackColor = System.Drawing.SystemColors.ControlDark;
             this.playField.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playField.Location = new System.Drawing.Point(0, 24);
             this.playField.Name = "playField";
@@ -83,14 +84,14 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // start
             // 
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(152, 22);
+            this.start.Size = new System.Drawing.Size(116, 22);
             this.start.Text = "&Start";
             this.start.Click += new System.EventHandler(this.StartToolStripMenuItem_Click);
             // 
@@ -98,19 +99,19 @@
             // 
             this.stop.Enabled = false;
             this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(152, 22);
+            this.stop.Size = new System.Drawing.Size(116, 22);
             this.stop.Text = "&Stop";
             this.stop.Click += new System.EventHandler(this.StopToolStripMenuItem_Click);
             // 
             // menuLine
             // 
             this.menuLine.Name = "menuLine";
-            this.menuLine.Size = new System.Drawing.Size(149, 6);
+            this.menuLine.Size = new System.Drawing.Size(113, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // helpToolStripMenuItem
@@ -136,7 +137,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 40;
+            this.timer.Interval = 10;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // progress

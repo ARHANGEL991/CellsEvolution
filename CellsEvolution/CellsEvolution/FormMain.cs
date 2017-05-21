@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 
 namespace CellsEvolution
@@ -35,7 +36,7 @@ namespace CellsEvolution
             battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
             size = new Size(settings.dimension * settings.scale+250, settings.dimension * settings.scale+250);
             this.Size = size;
-            
+            this.playField.Invalidate();
 
         }
 
@@ -54,7 +55,7 @@ namespace CellsEvolution
 
                     Color color = ColorTranslator.FromHtml("#"+current.ColorCode);
                     SolidBrush brush = new SolidBrush(color);
-                    if (scale > 3)
+                    if (scale > 4)
                     {
                         g.DrawRectangle(new Pen(color),i * scale, j * scale, scale - 1, scale - 1);
                         g.FillRectangle(brush,i * scale, j * scale, scale - 1, scale - 1);
@@ -91,7 +92,8 @@ namespace CellsEvolution
             run = true;
             start.Enabled=false;
             stop.Enabled=true;
-            StartAutoMove();
+            
+           StartAutoMove();
             
         }
 
@@ -105,12 +107,12 @@ namespace CellsEvolution
 
         private async void StartAutoMove()
         {
-            Settings settings = setForm.getSettings();
+             settings = setForm.getSettings();
             battleField = new BattleField(settings.dimension, settings.lumus);
             this.battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
             this.scale = settings.scale;
-            //this.Size=new Size(battleField.GetDimension()*scale, battleField.GetDimension()*scale);
-            
+            this.Size=new Size(battleField.GetDimension()*scale+19, battleField.GetDimension()*scale+77);
+        //    this.playField.Size = new Size(battleField.GetDimension() * scale, battleField.GetDimension() * scale);
             
             MoveIterator moveIterator = new MoveIterator(battleField);
 
@@ -119,15 +121,19 @@ namespace CellsEvolution
             
 
             int iternum = 0;
+
             while ((run) && (iternum < settings.maxIterations))
             {
                 iternum++;
                 progress.Value = iternum;
-                await LongOperationCellsMove(iternum, moveIterator);
+               await LongOperationCellsMove(iternum, moveIterator, progress);
+                
+               
             }
-
+           
+            
             start.Enabled=true;
-            menuLine.Enabled=false;
+            stop.Enabled=false;
             timer.Stop();
         }
 
@@ -142,15 +148,15 @@ namespace CellsEvolution
         }
 
 
-        private Task LongOperationCellsMove(int iternum, MoveIterator moveIterator)
+        private Task LongOperationCellsMove(int iternum, MoveIterator moveIterator,ProgressBar progress)
         {
             return Task.Factory.StartNew(() =>
             {
 
-                
-                   
-                    moveIterator.NextMove();
-                
+
+
+                moveIterator.NextMove();
+
 
             });
         }

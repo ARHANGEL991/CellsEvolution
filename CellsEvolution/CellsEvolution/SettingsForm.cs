@@ -95,13 +95,13 @@ namespace CellsEvolution
         {
             Settings settings = new Settings()
             {
-                dimension = Convert.ToInt16(dimension.Text),
-                scale = Convert.ToInt16(scale.Text),
+                dimension = Convert.ToInt32(dimension.Text),
+                scale = Convert.ToInt32(scale.Text),
                 lumus = !lumus.Checked,
-                maxIterations = Convert.ToInt16(maxIterations.Text),
-                strength = Convert.ToInt16(strength.Text),
-                mutagen = Convert.ToInt16(mutagen.Text),
-                end = Convert.ToInt16(end.Text)
+                maxIterations = Convert.ToInt32(maxIterations.Text),
+                strength = Convert.ToInt32(strength.Text),
+                mutagen = Convert.ToInt32(mutagen.Text),
+                end = Convert.ToInt32(end.Text)
             };
             return settings;
         }
