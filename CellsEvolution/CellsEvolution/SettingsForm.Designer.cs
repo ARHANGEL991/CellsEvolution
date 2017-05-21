@@ -152,7 +152,7 @@
             this.maxIterations.Name = "maxIterations";
             this.maxIterations.Size = new System.Drawing.Size(100, 20);
             this.maxIterations.TabIndex = 10;
-            this.maxIterations.Text = "1000";
+            this.maxIterations.Text = "25000";
             this.maxIterations.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // groupBox2

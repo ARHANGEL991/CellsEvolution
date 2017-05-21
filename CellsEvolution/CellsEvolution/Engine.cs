@@ -23,8 +23,9 @@ namespace CellsEvolution
 
      public   void Process(int x, int y)
         {
-            Cell target = battleField.GetCell(x, y);
-
+             Cell target = battleField.GetCell(x, y);
+             
+            
             if (target.energy >= target.end)
             {
                 Breed(x, y, target);

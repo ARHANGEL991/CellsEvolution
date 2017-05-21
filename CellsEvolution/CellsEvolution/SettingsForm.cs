@@ -18,7 +18,7 @@ namespace CellsEvolution
 
         public Settings settings;
 
-
+        public bool corect = false;
 
 
 
@@ -108,8 +108,25 @@ namespace CellsEvolution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.settings = getSettings();
-            this.Close();
+            corect = true;
+            try
+            {
+                this.settings = getSettings();
+            }
+            catch
+            {
+
+                MessageBox.Show(this, "Некорректный ввод! Проверте нет ли пустого поля \n или огромных значений", "Error", MessageBoxButtons.OK);
+
+
+                corect = false;
+            }
+
+            if (corect)
+            {
+                this.Close();
+            }
+            
         }
     }
 }
