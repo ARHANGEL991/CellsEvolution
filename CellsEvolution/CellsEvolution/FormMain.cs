@@ -23,6 +23,7 @@ namespace CellsEvolution
         private Settings settings;
 
         SettingsForm setForm;
+        FormAbout about;
 
         private BattleField battleField;
 
@@ -31,7 +32,8 @@ namespace CellsEvolution
             InitializeComponent();
             
              setForm = new SettingsForm();
-            settings = setForm.getSettings();
+            about = new FormAbout();
+            settings = setForm.GetSettings();
              battleField = new BattleField(settings.dimension, settings.lumus);
             battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
             size = new Size(settings.dimension * settings.scale+250, settings.dimension * settings.scale+250);
@@ -107,7 +109,7 @@ namespace CellsEvolution
 
         private async void StartAutoMove()
         {
-             settings = setForm.getSettings();
+             settings = setForm.GetSettings();
             battleField = new BattleField(settings.dimension, settings.lumus);
             this.battleField.Init(50, "FF0000", 0, settings.strength, settings.mutagen, settings.end);
             this.scale = settings.scale;
@@ -142,7 +144,7 @@ namespace CellsEvolution
             this.playField.Invalidate();
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             setForm.ShowDialog();
         }
@@ -159,6 +161,11 @@ namespace CellsEvolution
 
 
             });
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about.ShowDialog();
         }
     }
 }

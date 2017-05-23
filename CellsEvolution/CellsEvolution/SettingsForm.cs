@@ -28,7 +28,7 @@ namespace CellsEvolution
             InitializeComponent();
         }
 
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
@@ -36,7 +36,7 @@ namespace CellsEvolution
             }
         }
 
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
@@ -44,7 +44,7 @@ namespace CellsEvolution
             }
         }
 
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
@@ -52,7 +52,7 @@ namespace CellsEvolution
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
@@ -60,7 +60,7 @@ namespace CellsEvolution
             }
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
@@ -68,7 +68,7 @@ namespace CellsEvolution
             }
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
@@ -91,7 +91,7 @@ namespace CellsEvolution
 
 
         }
-      public  Settings getSettings()
+      public  Settings GetSettings()
         {
             Settings settings = new Settings()
             {
@@ -106,12 +106,12 @@ namespace CellsEvolution
             return settings;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             corect = true;
             try
             {
-                this.settings = getSettings();
+                this.settings = GetSettings();
             }
             catch
             {

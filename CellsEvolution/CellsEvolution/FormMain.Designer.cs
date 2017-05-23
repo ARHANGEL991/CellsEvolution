@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.playField = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,20 +42,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.progress = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.playField)).BeginInit();
+            this.playField = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playField)).BeginInit();
             this.SuspendLayout();
-            // 
-            // playField
-            // 
-            this.playField.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.playField.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.playField.Location = new System.Drawing.Point(0, 24);
-            this.playField.Name = "playField";
-            this.playField.Size = new System.Drawing.Size(967, 609);
-            this.playField.TabIndex = 0;
-            this.playField.TabStop = false;
-            this.playField.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
             // 
             // menuStrip1
             // 
@@ -86,7 +75,7 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
             // start
             // 
@@ -126,14 +115,15 @@
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.helpToolStripMenuItem1.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // timer
             // 
@@ -147,6 +137,17 @@
             this.progress.Name = "progress";
             this.progress.Size = new System.Drawing.Size(967, 12);
             this.progress.TabIndex = 2;
+            // 
+            // playField
+            // 
+            this.playField.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.playField.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.playField.Location = new System.Drawing.Point(0, 24);
+            this.playField.Name = "playField";
+            this.playField.Size = new System.Drawing.Size(967, 609);
+            this.playField.TabIndex = 0;
+            this.playField.TabStop = false;
+            this.playField.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
             // 
             // FormMain
             // 
@@ -162,9 +163,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "LifeEmulator";
-            ((System.ComponentModel.ISupportInitialize)(this.playField)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

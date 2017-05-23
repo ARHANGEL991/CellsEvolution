@@ -72,9 +72,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Число итераций";
+            this.label3.Text = "Число ходов";
             // 
             // label4
             // 
@@ -130,30 +130,33 @@
             // 
             // dimension
             // 
-            this.dimension.Location = new System.Drawing.Point(137, 30);
+            this.dimension.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.dimension.Location = new System.Drawing.Point(137, 27);
             this.dimension.Name = "dimension";
             this.dimension.Size = new System.Drawing.Size(100, 20);
             this.dimension.TabIndex = 12;
-            this.dimension.Text = "150";
-            this.dimension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.dimension.Text = "90";
+            this.dimension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox6_KeyPress);
             // 
             // scale
             // 
+            this.scale.BackColor = System.Drawing.SystemColors.MenuBar;
             this.scale.Location = new System.Drawing.Point(137, 67);
             this.scale.Name = "scale";
             this.scale.Size = new System.Drawing.Size(100, 20);
             this.scale.TabIndex = 11;
             this.scale.Text = "3";
-            this.scale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.scale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox5_KeyPress);
             // 
             // maxIterations
             // 
+            this.maxIterations.BackColor = System.Drawing.SystemColors.MenuBar;
             this.maxIterations.Location = new System.Drawing.Point(137, 107);
             this.maxIterations.Name = "maxIterations";
             this.maxIterations.Size = new System.Drawing.Size(100, 20);
             this.maxIterations.TabIndex = 10;
             this.maxIterations.Text = "25000";
-            this.maxIterations.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.maxIterations.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox4_KeyPress);
             // 
             // groupBox2
             // 
@@ -173,30 +176,33 @@
             // 
             // end
             // 
+            this.end.BackColor = System.Drawing.SystemColors.MenuBar;
             this.end.Location = new System.Drawing.Point(128, 107);
             this.end.Name = "end";
             this.end.Size = new System.Drawing.Size(100, 20);
             this.end.TabIndex = 9;
             this.end.Text = "100";
-            this.end.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.end.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox3_KeyPress);
             // 
             // mutagen
             // 
+            this.mutagen.BackColor = System.Drawing.SystemColors.MenuBar;
             this.mutagen.Location = new System.Drawing.Point(128, 63);
             this.mutagen.Name = "mutagen";
             this.mutagen.Size = new System.Drawing.Size(100, 20);
             this.mutagen.TabIndex = 8;
             this.mutagen.Text = "50";
-            this.mutagen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.mutagen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox2_KeyPress);
             // 
             // strength
             // 
+            this.strength.BackColor = System.Drawing.SystemColors.MenuBar;
             this.strength.Location = new System.Drawing.Point(128, 22);
             this.strength.Name = "strength";
             this.strength.Size = new System.Drawing.Size(100, 20);
             this.strength.TabIndex = 7;
             this.strength.Text = "1";
-            this.strength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.strength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1_KeyPress);
             // 
             // button1
             // 
@@ -208,12 +214,13 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Применить";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(549, 252);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
