@@ -68,21 +68,21 @@
             this.menuLine,
             this.exitToolStripMenuItem});
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
-            this.mainToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.mainToolStripMenuItem.Text = "Main";
+            this.mainToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.mainToolStripMenuItem.Text = "Меню";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Text = "Настройки";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
             // start
             // 
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(152, 22);
-            this.start.Text = "&Start";
+            this.start.Text = "&Старт";
             this.start.Click += new System.EventHandler(this.StartToolStripMenuItem_Click);
             // 
             // stop
@@ -90,7 +90,7 @@
             this.stop.Enabled = false;
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(152, 22);
-            this.stop.Text = "&Stop";
+            this.stop.Text = "&Стоп";
             this.stop.Click += new System.EventHandler(this.StopToolStripMenuItem_Click);
             // 
             // menuLine
@@ -102,7 +102,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Text = "Выход";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
@@ -111,20 +111,20 @@
             this.helpToolStripMenuItem1,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.helpToolStripMenuItem.Text = "About";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.helpToolStripMenuItem.Text = "Помощь";
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.helpToolStripMenuItem1.Text = "Help";
+            this.helpToolStripMenuItem1.Text = "Справка";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Text = "О программе";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // timer
@@ -165,7 +165,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
-            this.Text = "LifeEmulator";
+            this.Text = "Жизнь";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playField)).EndInit();

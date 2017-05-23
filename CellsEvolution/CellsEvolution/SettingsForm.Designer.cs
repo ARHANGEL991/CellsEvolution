@@ -45,8 +45,10 @@
             this.mutagen = new System.Windows.Forms.TextBox();
             this.strength = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,6 +117,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.dimension);
             this.groupBox1.Controls.Add(this.scale);
             this.groupBox1.Controls.Add(this.maxIterations);
@@ -127,6 +130,7 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки поля";
+            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
             // dimension
             // 
@@ -160,6 +164,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.end);
             this.groupBox2.Controls.Add(this.mutagen);
             this.groupBox2.Controls.Add(this.strength);
@@ -173,6 +178,7 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Настройки клетки";
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
             // end
             // 
@@ -206,6 +212,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(236, 217);
@@ -213,26 +220,39 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "Применить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CellsEvolution.Properties.Resources.w512h5121347465086Services;
+            this.pictureBox1.Location = new System.Drawing.Point(464, 189);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(549, 252);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
-            this.Text = "Settings";
+            this.Text = "Настройки";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +275,6 @@
         private System.Windows.Forms.TextBox end;
         private System.Windows.Forms.TextBox mutagen;
         private System.Windows.Forms.TextBox strength;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

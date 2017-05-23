@@ -79,5 +79,15 @@ namespace CellsEvolution.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap w512h5121347465086Services {
+            get {
+                object obj = ResourceManager.GetObject("w512h5121347465086Services", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

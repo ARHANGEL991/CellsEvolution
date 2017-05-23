@@ -128,5 +128,34 @@ namespace CellsEvolution
             }
             
         }
+
+        private void groupBox1_Paint(object sender, PaintEventArgs p)
+        {
+            GroupBox box = (GroupBox)sender;
+            p.Graphics.Clear(SystemColors.Control);
+            p.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
+        }
+
+        private void SettingsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            corect = true;
+            try
+            {
+                this.settings = GetSettings();
+            }
+            catch
+            {
+
+                MessageBox.Show(this, "Некорректный ввод! Проверте нет ли пустого поля \n или огромных значений", "Error", MessageBoxButtons.OK);
+
+                e.Cancel = true;
+                corect = false;
+            }
+
+            if (corect)
+            {
+                e.Cancel = false;
+            }
+        }
     }
 }
