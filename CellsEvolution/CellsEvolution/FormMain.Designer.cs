@@ -54,7 +54,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(967, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(318, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,9 +133,9 @@
             // progress
             // 
             this.progress.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progress.Location = new System.Drawing.Point(0, 621);
+            this.progress.Location = new System.Drawing.Point(0, 295);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(967, 12);
+            this.progress.Size = new System.Drawing.Size(318, 12);
             this.progress.TabIndex = 2;
             // 
             // playField
@@ -144,7 +144,7 @@
             this.playField.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playField.Location = new System.Drawing.Point(0, 24);
             this.playField.Name = "playField";
-            this.playField.Size = new System.Drawing.Size(967, 609);
+            this.playField.Size = new System.Drawing.Size(318, 283);
             this.playField.TabIndex = 0;
             this.playField.TabStop = false;
             this.playField.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 633);
+            this.ClientSize = new System.Drawing.Size(318, 307);
             this.Controls.Add(this.progress);
             this.Controls.Add(this.playField);
             this.Controls.Add(this.menuStrip1);

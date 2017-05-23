@@ -24,7 +24,7 @@ namespace CellsEvolution
 
         SettingsForm setForm;
         FormAbout about;
-
+        MoveIterator moveIterator;
         private BattleField battleField;
 
         public FormMain()
@@ -116,7 +116,7 @@ namespace CellsEvolution
             this.Size=new Size(battleField.GetDimension()*scale+19, battleField.GetDimension()*scale+77);
         //    this.playField.Size = new Size(battleField.GetDimension() * scale, battleField.GetDimension() * scale);
             
-            MoveIterator moveIterator = new MoveIterator(battleField);
+             moveIterator = new MoveIterator(battleField);
 
             progress.Minimum=0;
             progress.Maximum=settings.maxIterations;

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CellsEvolution.BattleField">
+    <Position X="9" Y="4" Width="1.5" />
+    <AssociationLine Name="cells" Type="CellsEvolution.Cell">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.164" Y="0.609" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAACQAEAAAAABCACAAAQAAAAACAAAIAAA=</HashCode>
+      <FileName>BattleField.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cells" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CellsEvolution.Cell">
+    <Position X="9" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAABQQDAAAAIAQAAEACAAQoAAIBACQAAACAAAAgAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellsEvolution.Command">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAIAAAAAACABgAAAIAABAEAAAAAIAACAAIA=</HashCode>
+      <FileName>Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellsEvolution.Engine">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <AssociationLine Name="battleField" Type="CellsEvolution.BattleField">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.19" Y="0.221" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="rand" Type="CellsEvolution.Randomize">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.686" Y="0.127" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAGIAAAAggAiAEgAAAAoAAAAAACAACAAIAAAA=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="battleField" />
+      <Field Name="rand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CellsEvolution.FormAbout">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAIQAAAAAAAAABAAAA=</HashCode>
+      <FileName>FormAbout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellsEvolution.FormMain">
+    <Position X="5.5" Y="2" Width="2.5" />
+    <AssociationLine Name="setForm" Type="CellsEvolution.SettingsForm">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.003" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="settings" Type="CellsEvolution.Settings">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.81" Y="0.445" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="moveIterator" Type="CellsEvolution.MoveIterator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.435" Y="0.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="about" Type="CellsEvolution.FormAbout">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-4.908" Y="3.916" Height="0.182" Width="0.835" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gQSpAgAAACAAAABgAYDHAQJCAICgAAQAQoFAAgAAAAA=</HashCode>
+      <FileName>FormMain.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="battleField" />
+      <Field Name="setForm" />
+      <Field Name="settings" />
+      <Field Name="moveIterator" />
+      <Field Name="about" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CellsEvolution.MoveIterator">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <AssociationLine Name="rand" Type="CellsEvolution.Randomize">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="2.721" Y="2.791" Height="0.182" Width="0.902" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="battleField" Type="CellsEvolution.BattleField">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.626" Y="1.385" Height="0.182" Width="1.043" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="engine" Type="CellsEvolution.Engine" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.531" Y="2.69" />
+        <Point X="11.531" Y="4.812" />
+        <Point X="12" Y="4.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.506" Y="1.747" Height="0.182" Width="0.869" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAICAAAAAAAAAAAAEAABAAAAAAAAAAAAAAgQAAAA=</HashCode>
+      <FileName>MoveIterator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="rand" />
+      <Field Name="battleField" />
+      <Field Name="engine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CellsEvolution.Program">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellsEvolution.Randomize">
+    <Position X="14.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAAAAAABAAAAgAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Randomize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellsEvolution.Settings">
+    <Position X="6.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUACAAACAAAAAQAAAABCAAAAIIAAQAAAAABIAAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CellsEvolution.SettingsForm">
+    <Position X="3" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgCACACABEAgACAACDCAAGMQAAAQCAAAAAIAAA=</HashCode>
+      <FileName>SettingsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="System.Windows.Forms.Form.ControlCollection" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
