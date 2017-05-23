@@ -57,7 +57,7 @@ namespace CellsEvolution
 
                     Color color = ColorTranslator.FromHtml("#"+current.ColorCode);
                     SolidBrush brush = new SolidBrush(color);
-                    if (scale > 4)
+                    if (scale > 3)
                     {
                         g.DrawRectangle(new Pen(color),i * scale, j * scale, scale - 1, scale - 1);
                         g.FillRectangle(brush,i * scale, j * scale, scale - 1, scale - 1);
