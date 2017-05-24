@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+using System.IO;
 
 namespace CellsEvolution
 {
@@ -171,6 +171,11 @@ namespace CellsEvolution
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this,"LifeHelp.chm");
         }
     }
 }

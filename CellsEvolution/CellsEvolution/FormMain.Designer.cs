@@ -74,14 +74,14 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.settingsToolStripMenuItem.Text = "Настройки";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
             // start
             // 
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(152, 22);
+            this.start.Size = new System.Drawing.Size(134, 22);
             this.start.Text = "&Старт";
             this.start.Click += new System.EventHandler(this.StartToolStripMenuItem_Click);
             // 
@@ -89,19 +89,19 @@
             // 
             this.stop.Enabled = false;
             this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(152, 22);
+            this.stop.Size = new System.Drawing.Size(134, 22);
             this.stop.Text = "&Стоп";
             this.stop.Click += new System.EventHandler(this.StopToolStripMenuItem_Click);
             // 
             // menuLine
             // 
             this.menuLine.Name = "menuLine";
-            this.menuLine.Size = new System.Drawing.Size(149, 6);
+            this.menuLine.Size = new System.Drawing.Size(131, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Выход";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -119,6 +119,7 @@
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.helpToolStripMenuItem1.Text = "Справка";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // aboutToolStripMenuItem
             // 
