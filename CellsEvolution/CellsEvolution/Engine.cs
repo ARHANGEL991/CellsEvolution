@@ -136,7 +136,7 @@ namespace CellsEvolution
 
         private void Move(int x, int y, Cell source)
         {
-            List<Cell> targets = FindNeighbors(x, y, EMPTY_CELL);
+            List<Cell> targets = FindNeighbors(x, y, EMPTY_CELL);// ищем пустые клетки
             if (targets.Count() > 0)
             {
                 Cell dest = targets[(rand.GetRandom(0, targets.Count() - 1))];
@@ -210,8 +210,9 @@ namespace CellsEvolution
             List<Cell> cells = new List<Cell>();
             foreach (Point dd in  BattleField.lookup)
             {
-                Cell cell = battleField.GetCell(x + dd.X, y + dd.Y);
-                if (cell.clr.Equals(code)) //todo метка занятости клетки
+                Point next = battleField.Normalize(x + dd.X, y + dd.Y);
+                Cell cell = battleField.GetCell(  next.X, next.Y);
+                if (cell.clr.Equals(code)) //если пусто
                     cells.Add(cell);
             }
             return cells;

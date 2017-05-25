@@ -31,8 +31,8 @@ namespace CellsEvolution
             List<int> processed = new List<int>(totalCell);
             while (processed.Count() < totalCell)
             {
-                int x = rand.GetRandom(0, dimension - 1);
-                int y = rand.GetRandom(0, dimension - 1);
+                int x = rand.GetRandom(0, dimension );
+                int y = rand.GetRandom(0, dimension );
                 processed.Add(y * dimension + x);
                 if ((!battleField.GetCell(x, y).clr.Equals("000000")) && (!battleField.GetCell(x, y).clr.Equals("FFFFFF")))
                 {

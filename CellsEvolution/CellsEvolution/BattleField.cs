@@ -77,7 +77,7 @@ namespace CellsEvolution
         }
 
 
-        private Point Normalize(int x, int y)
+        public Point Normalize(int x, int y)
         {
             return new Point((x + dimension) % dimension, (y + dimension) % dimension);
         }
