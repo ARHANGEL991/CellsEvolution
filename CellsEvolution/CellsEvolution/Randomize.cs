@@ -21,14 +21,6 @@ namespace CellsEvolution
             return GetRandom(1, 16777214).ToString("X2");
         }
 
-        public  int GetRandomPercent()
-        {
-            return GetRandom(0, 100);
-        }
-
-        public  int GetRandomDirection()
-        {
-            return GetRandom(0, 7);
-        }
+        
     }
 }

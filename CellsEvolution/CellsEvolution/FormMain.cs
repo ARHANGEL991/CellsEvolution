@@ -30,8 +30,17 @@ namespace CellsEvolution
         public FormMain()
         {
             InitializeComponent();
-            
-             setForm = new SettingsForm();
+
+            Opacity = 0;
+            System.Windows.Forms.Timer timer2 = new System.Windows.Forms.Timer();
+            timer2.Tick += new EventHandler((sender, e) =>
+            {
+                if ((Opacity += 0.08d) >= 1) timer2.Stop();
+            });
+            timer2.Interval = 100;
+            timer2.Start();
+
+            setForm = new SettingsForm();
             about = new FormAbout();
             settings = setForm.GetSettings();
              battleField = new BattleField(settings.dimension, settings.lumus);
@@ -39,6 +48,7 @@ namespace CellsEvolution
             size = new Size(settings.dimension * settings.scale+250, settings.dimension * settings.scale+250);
             this.Size = size;
             this.playField.Invalidate();
+
 
         }
 
