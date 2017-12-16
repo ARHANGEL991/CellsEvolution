@@ -25,10 +25,10 @@ namespace CellsEvolution
         };
 
 
-        private  int dimension;
+        private  int dimension;//размерность поля DIMxDIM
         private  int halfSize;
 
-        public BattleField(int dimension, bool lumus)
+        public BattleField(int dimension, bool lumus)  //конструктор
         {
             this.dimension = dimension;
             this.halfSize = dimension / 2;
@@ -77,7 +77,7 @@ namespace CellsEvolution
         }
 
 
-        public Point Normalize(int x, int y)
+        public Point Normalize(int x, int y) //нормализация позиции при выходе за границы
         {
             return new Point((x + dimension) % dimension, (y + dimension) % dimension);
         }
