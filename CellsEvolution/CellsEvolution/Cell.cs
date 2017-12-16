@@ -33,7 +33,7 @@ namespace CellsEvolution
 
              public  Cell()
              {
-                this.clr = "000000";
+                this.clr = "000000";                       //инициализация пустой клетки
              }
 
       public  int MyAction
@@ -47,12 +47,12 @@ namespace CellsEvolution
             }
         }
 
-        public void Gain()
+        public void Gain()                               //получить энергию фотосинтезом
             {
                 energy += gainbase * light;
             }
 
-        public void Turn(int dir)
+        public void Turn(int dir)                        //повернуться в заданном направлении
             {
                 if (dir % 2 == 0)
                 {
